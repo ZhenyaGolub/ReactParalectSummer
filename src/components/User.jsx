@@ -1,22 +1,19 @@
 import React from 'react'
+import UserContent from './UserContent'
+import Repositories from './Repositories'
+import { useSelector } from 'react-redux'
 
-const User = () => {
+const User = ({user}) => {
+    
     return (
-        <div class="main__user-information">
-            <div class="main__user-model">
-                <div class="main__user-avatar">
-                    <img src="./images/Avatar.png" alt="Avatar"/>
-                </div>
-                <div class="main__user-features">
-                    <h2 class="main__user-login">Dan Abramov</h2>
-                    <a href="#" class="main__user-name">gaearon</a>
-                    <div class="main__user-follow">
-                        <a href="#" class="main__user-followers"><i class="fas fa-user-friends"></i>65.8k followers</a>
-                        <a href="#" class="main__user-following"><i class="fas fa-user"></i>171 following</a>
-                    </div>
+        <main className="main">
+            <div className="container">
+                <div className="main__user">
+                    <UserContent user={user}/>
+                    <Repositories repositories={user.repositories}/>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

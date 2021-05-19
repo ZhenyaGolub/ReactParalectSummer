@@ -1,0 +1,23 @@
+.empty-wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        color: #808080;
+        font-size: 64px;
+        margin: 0 0 46px 0;
+    }
+    p{
+        font-size: 22px;
+        color: #808080;
+        text-align: center;
+        line-height: 140%;
+    }
+}
+
+.empty-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
