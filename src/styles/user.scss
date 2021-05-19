@@ -1,0 +1,111 @@
+.main{
+    &__user{
+        margin: 39px 0px 0 0px;
+        display: flex;
+        &-information{
+            margin: 0 96px 0 0;
+        }
+        &-avatar{
+            margin: 0 0 29px 0;
+            img{
+                border-radius: 50%;
+            }
+        }
+        &-login{
+            font-weight: 600;
+            font-size: 26px;
+            margin: 0 0 12px 0;
+        }
+        &-name{
+            display: inline-block;
+            margin: 0 0 25px 0;
+            font-size: 18px;
+            color: $basicColor;
+            text-decoration: none;
+        }
+        &-follow{
+            display: flex;
+            justify-content: space-between;
+            i{
+                color: #7a7a7a;
+                margin: 0 8px 0 0;
+            }
+        }
+        &-followers{
+            @include follow();
+            margin: 0 20px 0 0;
+        }
+        &-following{
+            @include follow();
+        }
+        &-repositories{
+            flex: 1 1 auto;
+            &-title{
+                font-weight: 600;
+                font-size: 32px;
+                margin: 0 0 29px 0;
+            }
+            &-list{
+                display: flex;
+                flex-direction: column;
+            }
+            &-item{
+                padding: 24px 32px;
+                background-color: white;
+                border-radius: 6px;
+                margin: 0 0 24px 0;
+            }
+            &-name{
+                display: inline-block;
+                margin: 0 0 16px 0;
+                font-weight: 500;
+                font-size: 24px;
+                text-decoration: none;
+                color: $basicColor;
+            }
+            &-description{
+                font-size: 16px;
+            }
+            &-pagination{
+                display: flex;
+                justify-content: flex-end;
+                margin: 0 0 20px 0;
+                &-interface{
+                    display: flex;
+                    margin: 0 20px 0 0;
+                    i{
+                        font-size: 14px;
+                        &:last-child{
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.page-list{
+    font-size: 14px;
+    color: #808080;
+    margin: 0 23px 0 0;
+}
+
+.pages{
+    display: flex;
+    align-items: center;
+    i{
+        margin: 0 25px 0 0;
+        cursor: pointer;
+        &:last-child{
+            margin: 0;
+        }
+    }
+    a{
+        font-size: 14px;
+        color: #808080;
+        text-decoration: none;
+        margin: 0 16px 0 0;
+    }
+}

@@ -1,0 +1,89 @@
+@media(max-width: $lg + px){
+    .header__inner{
+        padding: 16px 0px;
+    }
+    .main__user-information{
+        margin: 0 50px 0 0;
+    }
+}
+
+@media(max-width: $md + px){
+    .main__user{
+        flex-direction: column;
+    }
+    .main__user-information{
+        margin: 0 0 30px 0;
+    }
+    .main__user-features{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__user-model{
+        display: flex;
+    }
+    .main__user-avatar{
+        margin: 0 30px 0 0;
+    }
+    .main__user-login{
+        margin: 0 0 30px 0;
+    }
+    .main__user-name{
+        margin: 0 0 20px 0;
+    }
+}
+
+@media(max-width: $sm + px){
+    .main__user-model{
+        flex-direction: column;
+        align-items: center
+    }
+    .main__user-avatar{
+        margin: 0;
+    }
+    .main__user-login{
+        text-align: center;
+        margin: 0 0 15px 0;
+        font-size: 23px;
+    }
+    .main__user-name{
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+    .main__user-follow{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__user-followers{
+        margin: 0 0 10px 0;
+    }
+    .main__user-repositories-title{
+        text-align: center;
+        font-size: 24px;
+    }
+    .main__user-repositories-name{
+        font-size: 20px;
+    }
+    .main__user-repositories-description{
+        font-size: 14px;
+    }
+    .main__user-repositories-pagination{
+        justify-content: center;
+    }
+    .main__user-repositories-pagination-interface{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .page-list{
+        font-size: 12px;
+        margin: 10px 0 0 0;
+    }
+    .pages{
+        i{
+            font-size: 12px;
+        }
+        a{
+            font-size: 12px;
+        }
+    }
+}

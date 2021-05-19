@@ -1,0 +1,25 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "user";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1253px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #E5E5E5;
+}
+
+@import "media";
