@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReactPaginate from 'react-paginate';
 
-function Pagination() {
+function Pagination({ repositoriesAmount }) {
+
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const PER_PAGE = 4;
+
+    const offset = currentPage * 4;
+
+    const pageCount = Math.ceil(repositoriesAmount / PER_PAGE);
+
     return (
-        <div className="main__user-repositories-pagination">
-            <div className="main__user-repositories-pagination-interface">
-                <span className="page-list">5-8 of 249 items</span>
-                <div className="pages">
-                    <i className="fas fa-chevron-left"></i>
-                    <a href="#" className="page">1</a>
-                    <a href="#" className="page">2</a>
-                    <a href="#" className="page">...</a>
-                    <a href="#" className="page">10</a>
-                    <i className="fas fa-chevron-right"></i>
-                </div>
-            </div>
-        </div>
+        <ReactPaginate
+          previousLabel={'previous'}
+          nextLabel={'next'}
+          breakLabel={'...'}
+          breakClassName={'break-me'}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          containerClassName={'pagination'}
+          activeClassName={'active'}
+        />
     )
 }
 

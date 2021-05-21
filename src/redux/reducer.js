@@ -1,5 +1,5 @@
 import initialState from './initialState'
-import { CHANGE_EMPTY, FETCH_USER } from './types';
+import { CHANGE_EMPTY, FETCH_USER, TOGGLE_LOADER } from './types';
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -7,6 +7,8 @@ const reducer = (state = initialState, action) => {
             return {...state, user: action.payload}
         case CHANGE_EMPTY:
             return {...state, emptyContent: 'USER NOT FOUND'}
+        case TOGGLE_LOADER:
+            return {...state, isLoader: !state.isLoader}
         default:
             return state;
     }

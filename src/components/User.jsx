@@ -10,7 +10,7 @@ const User = ({user}) => {
             <div className="container">
                 <div className="main__user">
                     <UserContent user={user}/>
-                    <Repositories repositories={user.repositories}/>
+                    <Repositories repositories={user ? user.repositories : {}}/>
                 </div>
             </div>
         </main>

@@ -1,6 +1,7 @@
 const initialState = {
     emptyContent: 'START',
-    user: null
+    user: null,
+    isLoader: false
 }
 
 export default initialState

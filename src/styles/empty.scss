@@ -21,3 +21,25 @@
     flex-direction: column;
     align-items: center;
 }
+
+.empty-repositories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i{
+            color: #808080;
+            font-size: 76px;
+            margin: 0 0 48px 0;
+        }
+        p{
+            font-size: 22px;
+            color: #808080;
+            text-align: center;
+            line-height: 140%;
+        }
+    }
+}
