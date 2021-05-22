@@ -31,6 +31,13 @@
     .main__user-name{
         margin: 0 0 20px 0;
     }
+    .pagination-wrapper{
+        flex-direction: column-reverse;
+        margin: 0 0 20px 0;
+    }
+    .pagination-information{
+        margin: 10px 0 0 0;
+    }
 }
 
 @media(max-width: $sm + px){
@@ -67,23 +74,5 @@
     .main__user-repositories-description{
         font-size: 14px;
     }
-    .main__user-repositories-pagination{
-        justify-content: center;
-    }
-    .main__user-repositories-pagination-interface{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .page-list{
-        font-size: 12px;
-        margin: 10px 0 0 0;
-    }
-    .pages{
-        i{
-            font-size: 12px;
-        }
-        a{
-            font-size: 12px;
-        }
-    }
+
 }
