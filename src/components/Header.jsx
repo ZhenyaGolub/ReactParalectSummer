@@ -17,9 +17,22 @@ const Header = () => {
             try {
                 dispatch(toggleLoader());
                 const user = await axios.get(`https://api.github.com/users/${username}`);
-                const repositories = await axios.get(`https://api.github.com/users/${username}/repos`);
+                const MAX_PER_PAGE = 100;
+                const requestsAmount = Math.ceil(user.data.public_repos / MAX_PER_PAGE);
+
+                let promise = new Promise(async (resolve, reject) => {
+                    let repositories = [];    
+                    for(let i = 1; i <= requestsAmount; i++){
+                        const list = await axios.get(`https://api.github.com/users/${username}/repos?per_page=100&page=${i}`);
+                        repositories.push(...list.data)
+                    }
+                    resolve(repositories);
+                })
+
+                const repositoriesList = await promise;
+
                 dispatch(toggleLoader());
-                dispatch(getUser(createUserModel(user.data, repositories.data)));
+                dispatch(getUser(createUserModel(user.data, repositoriesList)));
                 setUsername('');
                 searchRef.current.value = '';
             } catch(e){

@@ -1,28 +1,24 @@
 import React, { useState } from 'react'
 import ReactPaginate from 'react-paginate';
 
-function Pagination({ repositoriesAmount }) {
-
-    const [currentPage, setCurrentPage] = useState(0);
-
-    const PER_PAGE = 4;
-
-    const offset = currentPage * 4;
-
-    const pageCount = Math.ceil(repositoriesAmount / PER_PAGE);
-
+function Pagination({ pageCount, changePage, repositoriesAmout, firstCurrentPageRepository, lastCurrentPageRepository }) {
     return (
+      <div className="pagination-wrapper">
+        <span className="pagination-information">{firstCurrentPageRepository}-{lastCurrentPageRepository} of {repositoriesAmout} items</span>
         <ReactPaginate
-          previousLabel={'previous'}
-          nextLabel={'next'}
+          previousLabel={<i className="fas fa-chevron-left"></i>}
+          nextLabel={<i className="fas fa-chevron-right"></i>}
           breakLabel={'...'}
           breakClassName={'break-me'}
+          disabledClassName={'disabled'}
           pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
+          onPageChange={changePage}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={2}
           containerClassName={'pagination'}
           activeClassName={'active'}
         />
+        </div>
     )
 }
 
