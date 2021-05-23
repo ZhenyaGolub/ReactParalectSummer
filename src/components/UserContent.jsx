@@ -12,10 +12,10 @@ const UserContent = ({user}) => {
                 </div>
                 <div className="main__user-features">
                     <h2 className="main__user-login">{name}</h2>
-                    <a href={url} className="main__user-name">{login}</a>
+                    <a href={url} target="_blank" className="main__user-name">{login}</a>
                     <div className="main__user-follow">
-                        <a href={`https://github.com/${login}?tab=followers`} className="main__user-followers"><i className="fas fa-user-friends"></i>{followers} followers</a>
-                        <a href={`https://github.com/${login}?tab=following`} className="main__user-following"><i className="fas fa-user"></i>{following} following</a>
+                        <a href={`https://github.com/${login}?tab=followers`} target="_blank" className="main__user-followers"><i className="fas fa-user-friends"></i>{followers} followers</a>
+                        <a href={`https://github.com/${login}?tab=following`} target="_blank" className="main__user-following"><i className="fas fa-user"></i>{following} following</a>
                     </div>
                 </div>
             </div>
