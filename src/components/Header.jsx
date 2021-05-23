@@ -50,7 +50,7 @@ const Header = () => {
         <div className="container">
             <div className="header__inner">
                 <div className="header__logo">
-                    <a href="https://github.com/">
+                    <a href="https://github.com/" target="_blank">
                         <i className="fab fa-github"></i>
                     </a>
                 </div>

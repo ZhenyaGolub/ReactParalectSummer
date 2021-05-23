@@ -20,7 +20,7 @@ const Repositories = ({ repositories }) => {
     const currentPageRepositories = list.slice(offset, offset + PER_PAGE).map(repository => {
         return (
             <div key={repository.id} className="main__user-repositories-item">
-                <a href={repository.link} className="main__user-repositories-name">{repository.name}</a>
+                <a href={repository.link} target="_blank" className="main__user-repositories-name">{repository.name}</a>
                 <p className="main__user-repositories-description">{repository.description}</p>
             </div>
         )
